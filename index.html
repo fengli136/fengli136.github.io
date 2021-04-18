@@ -1,23 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="utf-8">
-<title>My Web Page</title>
+ <meta charset="CN">
+<title>fl的web</title>
 </head>
-<body style="background-color:lavender";>
-  <h1 style="background-color:lightskyblue;color:#fefdff;"> My First Website</h1>
-   <h2 style="border-style:solid; border-width:1px;">I hope you like it here.</h2>
-    <h3>I hope you like it here.</h3>
-     <h4>I hope you like it here.</h4>
-     <p style="color:midnightblue;">This is my paragraph</p>
-     <b>Bold text</b>
-     <i>Italic text</i>
-     <em>Emphasized text</em>
-     <strong>Strong text</strong>
-      <sub>Subscript text</sub>
-      <sup>Superscript text</sup>
-       <a href="http://www.cuc.edu.cn/main.htm" target="_blank">This is the link to CUC's Website</a>
-       <img src="http://www.cuc.edu.cn/_upload/site/00/05/5/logo.png"> <br>
-           <img src="1.jpg"></img>
+
+<body style="background-color:pink";>
+  <h1 style="color:Darkorange; border-width:70px"; > 谜题：生命诚可贵 （打一常用词）</h1>
+    <img src="che.jpg" onclick="myFunction()"  width="400"  align="right"  height="410"></img>
+
+
+
+  <h2 style="color:DeepPink;border-width:25px";>点击下方按钮输入你的答案吧！</h2>
+<input type="button" onclick="questionFunction()" style="color:MediumTurquoise"value="输入答案" />
+  <p id="demo"></p >
+
+  <h3 style="color:Indianred ;border-width:20px;">点击下方按钮可以获得提示哦</h3>
+<input type="button" onclick="remind()" style="color:DodgerBlue"value="提示" />
+<h4 style="color:LightCoral;border-width:20px;">想直接获得答案就点击下方按钮吧</h4>
+<input type="button" onclick="getAnswer()"style="color:LightSteelBlue ;" value="答案" />
+
+
 </body>
+<script>
+function questionFunction()
+{
+  	var x;
+  	var question=prompt("猜出来了吗？在下方输入你的答案吧！");
+  	if (question!=null && question=="活宝"){
+		alert("bingo!");
+		 x="恭喜你！" + question + "就是正确答案噢！ "
+  	    document.getElementById("demo").innerHTML=x;
+  document.getElementById("demo").style.fontSize = "30px";
+  document.getElementById("demo").style.color = "Fuchsia";
+
+  	}
+	else 	if (question!=null && question!="活宝"){
+		alert("Wrong answer！");
+		x="你的答案" + question + "是错误的，再想一想吧";
+  	    document.getElementById("demo").innerHTML=x;
+        document.getElementById("demo").style.fontSize = "30px";
+        document.getElementById("demo").style.color = "BlueViolet";
+  	}
+	}
+	function remind(){
+		alert("提示：答案是两个字的词语喔~");
+	}
+
+  function getAnswer(){
+		alert("咦~想知道答案吗，戳戳车银优试试");
+
+	}
+  function myFunction() {
+    	alert("答案就是活宝噢~");
+}
+
+</script>
 </html>
